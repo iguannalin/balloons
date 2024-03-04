@@ -13,8 +13,8 @@ html {
 }
 
 body {
+  /* background: url(assets/100Balloon.gif) no-repeat center center fixed;  */
   background-color: var(--main-bg-color);
-  background: url(assets/100ParentWindow.gif) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -34,17 +34,13 @@ body {
   height: 100vh;
 }
 
-button {
+#button {
   cursor: pointer;
-  width: 72px;
-  font-size: 64px;
-  border: none;
-  background-color: transparent;
-  box-shadow: none;
+  width: 110vw;
   padding: 2px;
   box-sizing: border-box;
 }
 
-button:hover{
-  text-shadow: 2px 5px blue;
+#button:hover{
+  width: 120vw;
 }

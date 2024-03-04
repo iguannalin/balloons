@@ -19,6 +19,7 @@ window.addEventListener("load", () => {
   console.log(balloons, popped);
 
   function drawCard() {
+    if (Math.random() > 0.7) return;
     if (card > getRandomInt(25,70)) return clearInterval(int);
     const rand = getRandomInt(0,balloons.length);
     const balloon = `https://iguannalin.github.io/balloons/${balloons[rand]}`;
@@ -40,10 +41,10 @@ window.addEventListener("load", () => {
         let y = 0;
         window.setInterval(()=>{
           y+=1;
-          x=Math.random()>0.5?x+1:x;
+          x=Math.random()>0.3?x+1:Math.random()>0.3?x-1:x;
           window.moveTo(x, y);
-        },50);
-        window.onclick = () => {balloon.src="${pop}";setTimeout(window.close, 200)};
+        },25);
+        window.onclick = () => {balloon.src="${pop}";setTimeout(window.close, 250)};
         </script>
         </body></html>`;
         const blob = new Blob([text], {type: "text/html"});
