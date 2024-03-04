@@ -32,15 +32,16 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0 auto;
 }
 
 #button {
   cursor: pointer;
-  width: 110vw;
+  width: 95vw;
   padding: 2px;
   box-sizing: border-box;
 }
 
 #button:hover{
-  width: 120vw;
+  width: 100vw;
 }
