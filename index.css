@@ -46,6 +46,5 @@ button {
 }
 
 button:hover{
-  text-decoration: underline;
-  border-bottom: 5px solid blue;
+  text-shadow: 2px 5px blue;
 }

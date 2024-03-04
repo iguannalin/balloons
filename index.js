@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
   console.log(balloons, popped);
 
   function drawCard() {
-    if (card > getRandomInt(25,50)) return clearInterval(int);
+    if (card > getRandomInt(25,70)) return clearInterval(int);
     const rand = getRandomInt(0,balloons.length);
     const balloon = `https://iguannalin.github.io/balloons/${balloons[rand]}`;
     const pop = `https://iguannalin.github.io/balloons/${popped[rand]}`;
@@ -36,8 +36,8 @@ window.addEventListener("load", () => {
       </div>
       <script>
         const balloon = document.getElementById("balloon");
-        let x = (Math.random()*window.screenLeft)+(window.screenLeft-100);
-        let y = window.screenTop;
+        let x = window.screenLeft;
+        let y = 0;
         window.setInterval(()=>{
           y+=1;
           x=Math.random()>0.5?x+1:x;
@@ -48,10 +48,10 @@ window.addEventListener("load", () => {
         </body></html>`;
         const blob = new Blob([text], {type: "text/html"});
     const blobUrl = URL.createObjectURL(blob);
-    window.open(blobUrl, '_blank', `popup,location,status,scrollbars,resizable,width=100,height=100,top=0,left=${getRandomInt(0,window.innerWidth)}`);
+    window.open(blobUrl, '_blank', `popup,location,status,scrollbars,resizable,width=100,height=100,top=0,left=${getRandomInt(100,screen.width-100)}`);
     window.URL.revokeObjectURL(blobUrl);
     card++;
   }
 
-  button.onclick = () => {int = setInterval(drawCard, 250);};
+  button.onclick = () => {int = setInterval(drawCard, 370);};
 });
