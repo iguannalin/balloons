@@ -1,0 +1,36 @@
+/* @import url(small.css) (min-width:0px);
+@import url(large.css) (min-width:900px); */
+
+:root {
+  --main-bg-color: rgb(35, 35, 35);
+  --main-text-color: #f9faffde;
+  --shadow-color: #858ebc;
+}
+
+html {
+  display: block;
+  width: 100%;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  background: url(assets/100ParentWindow.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  color: var(--main-text-color);
+  text-shadow: var(--shadow-color) -2px 2px 8px;
+  filter: brightness(0.5);
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
