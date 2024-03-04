@@ -9,7 +9,8 @@ window.addEventListener("load", () => {
   const button = document.getElementById("button");
   let int;
   let card = 0;
-  const 
+  const colors = ["green", "orange", "purple", "red"];
+  const types = ["Balloon", "Pop"]
 
   let angle = 0;
   let step = (2*Math.PI) / 12;
