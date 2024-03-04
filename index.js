@@ -43,15 +43,15 @@ window.addEventListener("load", () => {
           x=Math.random()>0.5?x+1:x;
           window.moveTo(x, y);
         },50);
-        window.onclick = () => {balloon.src="${pop}";setTimeout(window.close, 250)};
+        window.onclick = () => {balloon.src="${pop}";setTimeout(window.close, 200)};
         </script>
         </body></html>`;
         const blob = new Blob([text], {type: "text/html"});
     const blobUrl = URL.createObjectURL(blob);
-    window.open(blobUrl, '_blank', `popup,location,status,scrollbars,resizable,width=100,height=100,top=0,left=${getRandomInt(100,screen.width-100)}`);
+    window.open(blobUrl, '_blank', `popup,location,status,scrollbars,resizable,width=100,height=100,top=0,left=${getRandomInt(200,screen.width-200)}`);
     window.URL.revokeObjectURL(blobUrl);
     card++;
   }
 
-  button.onclick = () => {int = setInterval(drawCard, 370);};
+  button.onclick = () => {int = setInterval(drawCard, 500);};
 });
