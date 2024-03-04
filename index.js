@@ -17,21 +17,6 @@ window.addEventListener("load", () => {
     balloons.push(`assets/${color}Balloon.gif`);
     popped.push(`assets/${color}Pop.gif`);
   });
-  // viridis color palette from--https://waldyrious.net/viridis-palette-generator/
-  const bgs = [
-      "#f0f921",
-      "#fcd225",
-      "#fdae32",
-      "#f68d45",
-      "#e76f5a",
-      "#d5546e",
-      "#c03a83",
-      "#a62098",
-      "#8606a6",
-      "#6300a7",
-      "#3e049c",
-      "#0d0887"
-  ];
 
   function drawCard() {
     if (Math.random() > 0.6) return; // manually staggering balloons
@@ -51,14 +36,13 @@ window.addEventListener("load", () => {
           <img id="balloon" src="${balloon}"/>
       </div>
       <script>
-        document.body.style.backgroundColor = "${bgs[getRandomInt(0,bgs.length)]}";
         const balloon = document.getElementById("balloon");
         let x = window.screenLeft;
-        let y = 0;
+        let y = window.screenTop;
         window.setInterval(()=>{
           if (y >= screen.height-200) {
             balloon.src="${pop}";
-            setTimeout(window.close, 300);
+            setTimeout(window.close, 350);
           }
           y+=1;
           x=Math.random()>0.3?x+0.5:Math.random()>0.3?x-0.5:x;
@@ -66,15 +50,14 @@ window.addEventListener("load", () => {
         },25);
         window.onclick = () => {
           balloon.src="${pop}";
-          setTimeout(window.close, 250);
+          setTimeout(window.close, 350);
         };
         </script>
         </body></html>`;
         const blob = new Blob([text], {type: "text/html"});
     const blobUrl = URL.createObjectURL(blob);
-    window.open(blobUrl, '_blank', `popup,location,status,scrollbars,resizable,width=100,height=100,top=0,left=${getRandomInt(200,screen.width-200)}`);
+    window.open(blobUrl, '_blank', `popup,location,status,scrollbars,resizable,width=100,height=100,top=${getRandomInt(0, screen.height/4)},left=${getRandomInt(200,screen.width-400)}`);
     window.URL.revokeObjectURL(blobUrl);
-    document.body.style.backgroundColor=bgs[getRandomInt(0,bgs.length)];
     card++;
   }
 
