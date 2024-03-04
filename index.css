@@ -25,7 +25,6 @@ body {
   flex-flow: column;
   color: var(--main-text-color);
   text-shadow: var(--shadow-color) -2px 2px 8px;
-  filter: brightness(0.5);
 }
 
 #container {
@@ -33,4 +32,20 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+button {
+  cursor: pointer;
+  width: 72px;
+  font-size: 64px;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 2px;
+  box-sizing: border-box;
+}
+
+button:hover{
+  text-decoration: underline;
+  border-bottom: 5px solid blue;
 }
