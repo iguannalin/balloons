@@ -20,7 +20,7 @@ window.addEventListener("load", () => {
 
   function drawCard() {
     if (Math.random() > 0.6) return; // manually staggering balloons
-    if (card > getRandomInt(25,70)) return clearInterval(int);
+    if (card > 100) return clearInterval(int);
     const rand = getRandomInt(0,balloons.length);
     const balloon = `https://iguannalin.github.io/balloons/${balloons[rand]}`;
     const pop = `https://iguannalin.github.io/balloons/${popped[rand]}`;
